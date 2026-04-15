@@ -12,7 +12,7 @@ from export_excel import export_to_excel
 
 st.set_page_config(page_title="ONE PDF Parser", layout="centered")
 
-st.title("📄 ONE TAWB PDF Contract → Excel Tool")
+st.title("📄 ONE TAWB Contract → Excel Tool")
 
 st.markdown("""
 
