@@ -12,25 +12,20 @@ from export_excel import export_to_excel
 
 st.set_page_config(page_title="ONE PDF Parser", layout="centered")
 
-st.title("📄 ONE TAWB Contract → Excel Tool")
+st.title("📄 ONE Contract → Excel Tool")
 
 st.markdown("""
+### 📌 What this tool does
+- Extracts Ocean Freight rates  
+- Filters **DRY** containers only  
+- Maps **Origin → Destination → Rates → Valid Date**
 
-### What this tool does:
-- Extracts Ocean Freight rates
-- Filters DRY containers only
-- Maps Origin → Destination → Rates
 ---
-""")
-
-st.markdown("""
----
-### ⚠️ Note
-
+### ⚠️ Important Note
 - If the PDF contains **both old and updated validity dates** (e.g., crossed-out or revised dates),
   the result may be **incorrect or outdated**.
 
-👉 Please double-check the validity period in the original PDF when multiple dates are present.
+👉 Please verify the correct validity period in the original PDF when multiple dates are present.
 """)
 
 
