@@ -12,18 +12,25 @@ from export_excel import export_to_excel
 
 st.set_page_config(page_title="ONE PDF Parser", layout="centered")
 
-st.title("📄 ONE Contract → Excel Tool")
+st.title("📄 ONE TAWB PDF Contract → Excel Tool")
 
 st.markdown("""
-Upload your ONE contract PDF and convert it into structured Excel.
 
-**What this tool does:**
+### What this tool does:
 - Extracts Ocean Freight rates
 - Filters DRY containers only
 - Maps Origin → Destination → Rates
-- Outputs Excel ready for analysis
-
 ---
+""")
+
+st.markdown("""
+---
+### ⚠️ Note
+
+- If the PDF contains **both old and updated validity dates** (e.g., crossed-out or revised dates),
+  the result may be **incorrect or outdated**.
+
+👉 Please double-check the validity period in the original PDF when multiple dates are present.
 """)
 
 
@@ -74,12 +81,12 @@ if pdf_file is not None:
         # Debug info（可選）
         # =========================
 
-        with st.expander("🔍 Debug Info"):
-            st.write(f"Total blocks: {len(data)}")
+        # with st.expander("🔍 Debug Info"):
+        #     st.write(f"Total blocks: {len(data)}")
 
-            if len(data) > 0:
-                st.write("Sample block:")
-                st.json(data[0])
+        #     if len(data) > 0:
+        #         st.write("Sample block:")
+        #         st.json(data[0])
 
         # 清掉暫存檔（optional）
         os.remove(pdf_path)
